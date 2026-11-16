@@ -69,6 +69,14 @@ php artisan key:generate
 touch database/database.sqlite
 php artisan migrate --seed
 php artisan serve
+cd C:\labs\lab4
+composer install
+copy .env.example .env
+type nul > database\database.sqlite
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+(Команды copy и type nul > работают в стандартной консоли cmd и консоли OSPanel. Если вводишь в PowerShell — вместо type nul > ... пиши New-Item database\database.sqlite -Force).
 ```
 
 Тестовые аккаунты (для `lab3` и `lab4` после `--seed`, пароль везде `password123`):
